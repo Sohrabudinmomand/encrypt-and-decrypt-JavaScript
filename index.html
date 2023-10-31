@@ -13,8 +13,19 @@
 <body>
     <div class="container">
         <div class="enterDate">
-            <input id="inputmaintext" type="text">
-            <button id="toEncrypt">encrypt</button>
+
+            <div class="input-container">
+                <input required="" id="inputRealText" type="text">
+
+            </div>
+
+            <div class="input-container">
+                <input required="" id="inputEncryptedDate" type="text">
+
+            </div>
+
+            <button onclick="encrypter()" id="toEncrypt">encrypt</button>
+            <button onclick="decrypt()" id="toEncrypt">Decrypt</button>
         </div>
     </div>
 
