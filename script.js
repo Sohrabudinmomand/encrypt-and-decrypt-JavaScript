@@ -431,4 +431,68 @@
 
 // console.log(enteredData);
 
+// function encryptData(data) {
+//     let encryptedData = '';
+//     for (let i = 0; i < data.length; i++) {
+//         const charCode = data.charCodeAt(i);
+//         const encryptcharCode = charCode + 1;
+//         encryptedData += String.fromCharCode(encryptcharCode);
+//     }
+//     return encryptedData;
+// }
 
+// function decryptData(encryptedData) {
+//     let decryptedData = '';
+//     for (let i = 0; i < encryptedData.length; i++) {
+//         const charCode = data.charCodeAt(i);
+//         const decryptedCharCode = charCode - 1;
+//         decryptedData += String.fromCharCode(decryptedCharCode);;
+//     }
+//     return decryptedData;
+// }
+
+
+
+
+// const data = "Sohrab momand";
+// const makeThisencrypted = encryptData(data);
+// console.log(makeThisencrypted);
+
+// const decrypt = decryptData(makeThisencrypted);
+// console.log(decrypt)
+
+// i will make a function that could encrypt the data
+// Encryption function
+function encryptData(data) {
+    // now i need a varibale to store the encrypted data later
+    let encryptedData = '';
+    // with the help of the for loop below we will get every charecter of the inputed data or string
+    for (let i = 0; i < data.length; i++) {
+        // using the charCodeAt() method
+        const charCode = data.charCodeAt(i);
+        const encryptedCharCode = charCode + 1;
+        encryptedData += String.fromCharCode(encryptedCharCode);
+    }
+    return encryptedData; // Return the encrypted data
+}
+
+// Decryption function
+function decryptData(encryptedData) {
+    // now i need a varibale to store the encrypted data later
+    let decryptedData = '';
+    for (let i = 0; i < encryptedData.length; i++) {
+        const charCode = encryptedData.charCodeAt(i);
+        const decryptedCharCode = charCode - 1;
+        decryptedData += String.fromCharCode(decryptedCharCode);
+    }
+    return decryptedData; // Return the decrypted data
+}
+
+// Usage example
+const data = 'i am from logar province';
+
+const encrypted = encryptData(data);
+console.log(encrypted);
+
+const decrypted = decryptData(encrypted);
+console.log(decrypted); 
