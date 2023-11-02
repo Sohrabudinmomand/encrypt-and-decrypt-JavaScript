@@ -206,56 +206,123 @@
 // const decryptedText = decryptData(encryptedText, shift);
 // console.log("Decrypted: " + decryptedText);
 
-function toEncryptData(sTring) {
 
-    // the variable below used to stroe all the encrypted data manually 
-    // we could use the method charCodeAt() but i want to do it manually
-    let base64charecters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+// function toEncryptData(sTring) {
 
-    // now in here i want to convert the entered string to an array of charecters
-    // so i must use the split method to split any string into charecters
-    let charecters = sTring.split("");
+//     // the variable below used to stroe all the encrypted data manually
+//     // we could use the method charCodeAt() but i want to do it manually
+//     let base64charecters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 
-    // now i need a variable to store the result of the splited characters
-    let result = "";
+//     // now in here i want to convert the entered string to an array of charecters
+//     // so i must use the split method to split any string into charecters
+//     let charecters = sTring.split("");
 
-    // now i must loop through each charecter in the array 
-    // using foor loop
-    for (let i = 0; i < charecters.length; i++) {
+//     // now i need a variable to store the result of the splited characters
+//     let result = "";
 
-        let charecter1 = charecters[i].charCodeAt(0);
-        let charecter2 = charecters[i + 1] ? charecters[i + 1].charCodeAt(0) : 0;
-        let charecter3 = charecters[i + 2] ? charecters[i + 2].charCodeAt(0) : 0;
+//     // now i must loop through each charecter in the array
+//     // using foor loop
+//     for (let i = 0; i < charecters.length; i++) {
 
-
-        // now lets combine the charecters values into 64-bit number
-        let combinedValue = (charecter1 << 16) + (charecter2 << 8) + charecter3;
-
-        // now i will use an array to split the 24 bit numbers into 6bit numbers
-        let base64Values = [
-            (combinedValue >> 18) & 63,
-            (combinedValue >> 12) & 63,
-            (combinedValue >> 6) & 63,
-            combinedValue & 63,
-        ];
-
-        // now i will convert the base64 numbers into base64 charecters
-        let convertbase64charecters = base64Values.map(function (value) {
-            return base64charecters.charAt(value);
-        })
-
-        result += base64Values.join("");
-    }
-
-    return result;
-}
-
-let realText = prompt("Enter Your Password");
-let encryptthedaTa = toEncryptData(realText);
-console.log("realText " + encryptthedaTa);
+//         let charecter1 = charecters[i].charCodeAt(0);
+//         let charecter2 = charecters[i + 1] ? charecters[i + 1].charCodeAt(0) : 0;
+//         let charecter3 = charecters[i + 2] ? charecters[i + 2].charCodeAt(0) : 0;
 
 
-console.log("sohrab");
+//         // now lets combine the charecters values into 64-bit number
+//         let combinedValue = (charecter1 << 16) + (charecter2 << 8) + charecter3;
+
+//         // now i will use an array to split the 24 bit numbers into 6bit numbers
+//         let base64Values = [
+//             (combinedValue >> 18) & 63,
+//             (combinedValue >> 12) & 63,
+//             (combinedValue >> 6) & 63,
+//             combinedValue & 63,
+//         ];
+
+//         // now i will convert the base64 numbers into base64 charecters
+//         let convertbase64charecters = base64Values.map(function (value) {
+//             return base64charecters.charAt(value);
+//         });
+
+//         if (!charecters[i + 1]) {
+//             convertbase64charecters[2] = '=';
+//         }
+
+//         if (!charecters[i + 2]) {
+//             convertbase64charecters[3] = '=';
+//         }
+
+//         result += base64Values.join("");
+//     }
+
+//     return result;
+// }
+
+// let realText = prompt("Enter Your Password");
+// let encryptthedaTa = toEncryptData(realText);
+// console.log(encryptthedaTa);
+
+
+// console.log("sohrab");
+
+
+
+
+// let password = prompt("Enter your password");
+
+// let encrypt = Number(password) * Math.random();
+
+// console.log(encrypt);
+
+
+// let enteredData = prompt("Enter your name");
+
+// let changeTheData = Math.random();
+
+// let result = Number(enteredData) * changeTheData;
+
+// let changeThedataBack = result.toString();
+
+// console.log(changeThedataBack);
+
+
+
+
+
+// function encryptData(data, key) {
+//     const keyBytes = [];
+//     for (let i = 0; i < data.length; i++) {
+//         keyBytes.push(key.charCodeAt(i));
+//     }
+
+//     const dataBytes = [];
+//     for (let i = 0; i < data.length; i++) {
+//         dataBytes.push(data.charCodeAt(i));
+//     }
+
+
+//     const encryptedBytes = [];
+//     for (let i = 0; i < dataBytes.length; i++) {
+//         const encryptedByte = dataBytes[i] ^ keyBytes[i % keyBytes.length];
+//         encryptedBytes.push(encryptedByte);
+//     }
+
+//     let encryptedData = "";
+//     for (let i = 0; i < encryptedBytes.length; i++) {
+//         const hex = encryptedBytes[i].toString(16).padStart(2, "0");
+//         encryptedData += hex;
+//     }
+
+//     return encryptedData;
+// }
+
+// const data = "hu";
+// const key = "My secret Key";
+
+// const encryptedData = encryptData(data, key); console.log("encrypted Data: ", encryptedData);
+
+// encryptData();
 
 
 
@@ -263,5 +330,105 @@ console.log("sohrab");
 
 
 
+//==============//
+// if a === ksncjdbf3r and random number
+//==============//
+
+// let enteredData = prompt("enter Your Name");
+// if (enteredData >= "E" || enteredData >= "e") {
+//     console.log("true");
+// } else {
+//     console.log("false");
+// }
+
+
+
+
+
+// let enteredData = prompt("enter Your Name");
+
+// switch (enteredData) {
+//     case 'A':
+//         console.log("Kos zanet");
+//         break;
+//     case 'B':
+//         console.log("Kos zanet");
+//         break;
+//     case 'C':
+//         console.log("Kos zanet");
+//         break;
+//     case 'D':
+//         console.log("Kos zanet");
+//         break;
+//     case 'E':
+//         console.log("Kos zanet");
+//         break;
+//     case 'F':
+//         console.log("Kos zanet");
+//         break;
+//     case 'G':
+//         console.log("Kos zanet");
+//         break;
+//     case 'H':
+//         console.log("Kos zanet");
+//         break;
+//     case 'I':
+//         console.log("Kos zanet");
+//         break;
+//     case 'J':
+//         console.log("Kos zanet");
+//         break;
+//     case 'K':
+//         console.log("Kos zanet");
+//         break;
+//     case 'L':
+//         console.log("Kos zanet");
+//         break;
+//     case 'M':
+//         console.log("Kos zanet");
+//         break;
+//     case 'N':
+//         console.log("Kos zanet");
+//         break;
+//     case 'O':
+//         console.log("Kos zanet");
+//         break;
+//     case 'P':
+//         console.log("Kos zanet");
+//         break;
+//     case 'Q':
+//         console.log("Kos zanet");
+//         break;
+//     case 'R':
+//         console.log("Kos zanet");
+//         break;
+//     case 'S':
+//         console.log("Kos zanet");
+//         break;
+//     case 'T':
+//         console.log("Kos zanet");
+//         break;
+//     case 'U':
+//         console.log("Kos zanet");
+//         break;
+//     case 'V':
+//         console.log("Kos zanet");
+//         break;
+//     case 'W':
+//         console.log("Kos zanet");
+//         break;
+//     case 'X':
+//         console.log("Kos zanet");
+//         break;
+//     case 'Y':
+//         console.log("Kos zanet");
+//         break;
+//     case 'Z':
+//         console.log("Kos zanet");
+//         break;
+// }
+
+
+// console.log(enteredData);
 
 
