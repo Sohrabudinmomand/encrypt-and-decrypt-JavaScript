@@ -463,14 +463,14 @@
 
 // i will make a function that could encrypt the data
 // Encryption function
-function encryptData(data) {
+function encryptTheData(data) {
     // now i need a varibale to store the encrypted data later
     let encryptedData = '';
     // with the help of the for loop below we will get every charecter of the inputed data or string
     for (let i = 0; i < data.length; i++) {
         // using the charCodeAt() method
-        const charCode = data.charCodeAt(i);
-        const encryptedCharCode = charCode + 1;
+        const charecterCode = data.charCodeAt(i);
+        const encryptedCharCode = charecterCode + 1;
         encryptedData += String.fromCharCode(encryptedCharCode);
     }
     return encryptedData; // Return the encrypted data
@@ -482,7 +482,7 @@ function decryptData(encryptedData) {
     let decryptedData = '';
     for (let i = 0; i < encryptedData.length; i++) {
         const charCode = encryptedData.charCodeAt(i);
-        const decryptedCharCode = charCode - 1;
+        const decryptedCharCode = charecterCode - 1;
         decryptedData += String.fromCharCode(decryptedCharCode);
     }
     return decryptedData; // Return the decrypted data
@@ -491,7 +491,7 @@ function decryptData(encryptedData) {
 // Usage example
 const data = 'i am from logar province';
 
-const encrypted = encryptData(data);
+const encrypted = encryptTheData(data);
 console.log(encrypted);
 
 const decrypted = decryptData(encrypted);
